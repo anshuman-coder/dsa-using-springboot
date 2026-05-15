@@ -1,0 +1,30 @@
+package com.dsa.leetcode.controller;
+
+import com.dsa.leetcode.model.request.arrays.TwoSumRequest;
+import com.dsa.leetcode.model.response.ApiResponse;
+import com.dsa.leetcode.service.ArraysService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/v1/arrays")
+@RequiredArgsConstructor
+@Tag(name = "Arrays", description = "Array-based LeetCode problems")
+public class ArraysController {
+
+    private final ArraysService arraysService;
+
+    @PostMapping("/two-sum")
+    @Operation(summary = "LC #1 — Two Sum",
+               description = "Returns indices of two numbers in nums that add up to target.")
+    public ApiResponse<int[]> twoSum(@Valid @RequestBody TwoSumRequest request) {
+        int[] result = arraysService.twoSum(request.getNums(), request.getTarget());
+        return ApiResponse.ok(result);
+    }
+}
