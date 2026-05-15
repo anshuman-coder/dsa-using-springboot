@@ -10,8 +10,11 @@ Each problem gets its own Controller, Service, and Util class named after the **
 ```
 {ProblemName}Controller   →  TwoSumController
 {ProblemName}Service      →  TwoSumService
-{ProblemName}Solver       →  TwoSumSolver       (lives in util/)
-{ProblemName}Request      →  TwoSumRequest      (lives in model/request/{topic}/)
+{ProblemName}Solver       →  TwoSumSolver       (lives in util/{topic}/)
+{ProblemName}Input        →  TwoSumInput        (lives in model/request/ — problem-specific fields)
+ProblemRequest<T>         →  shared generic wrapper — holds List<T> tests
+ProblemResponse<I, R>     →  shared generic wrapper — holds List<TestResult<I, R>> tests
+TestResult<I, R>          →  shared generic — holds input, result, satisfied
 ```
 
 ### Why not `ArraysController`?
@@ -32,7 +35,7 @@ This is the same principle used in real production APIs:
 | `BestTimeToBuyAndSellStockController.java` | `controller/` |
 | `BestTimeToBuyAndSellStockService.java` | `service/` |
 | `BestTimeToBuyAndSellStockSolver.java` | `util/arrays/` |
-| `BestTimeToBuyAndSellStockRequest.java` | `model/request/arrays/` |
+| `BestTimeToBuyAndSellStockInput.java` | `model/request/` |
 
 ---
 

@@ -27,8 +27,7 @@ src/main/java/com/dsa/leetcode/
 │
 ├── model/                           # Layer 3 — Data shapes (MVC: Model/data)
 │   ├── request/
-│   │   └── arrays/                  # One request DTO per problem, grouped by topic
-│   │       └── TwoSumRequest.java
+│   │   └── TwoSumRequest.java       # One request DTO per problem, flat — no topic subfolders
 │   └── response/
 │       └── ApiResponse.java         # Generic envelope: { success, data, error, timestamp }
 │

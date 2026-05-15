@@ -1,4 +1,4 @@
-package com.dsa.leetcode.model.request.arrays;
+package com.dsa.leetcode.model.request;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class TwoSumRequest {
+public class TwoSumInput {
 
-    @NotNull(message = "nums array is required")
-    @NotEmpty(message = "nums array must not be empty")
+    @NotNull(message = "nums is required")
+    @NotEmpty(message = "nums must not be empty")
     private int[] nums;
 
     @NotNull(message = "target is required")
