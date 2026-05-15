@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class ArraysService {
+public class TwoSumService {
 
     private final TwoSumSolver twoSumSolver;
 
-    public int[] twoSum(int[] nums, int target) {
+    public int[] solve(int[] nums, int target) {
         return twoSumSolver.solve(nums, target);
     }
 }

@@ -64,16 +64,14 @@ src/main/java/com/dsa/leetcode/
 ## URL convention
 
 ```
-POST /api/v1/{topic}/{problem-slug}
+POST /api/v1/{problem-slug}
 ```
 
-| Topic | Example endpoint |
+The topic (Arrays, Strings, DP, etc.) is documented in the Swagger `@Operation` description — not in the URL.
+
+| Problem | Endpoint |
 |---|---|
-| arrays | `/api/v1/arrays/two-sum` |
-| strings | `/api/v1/strings/{slug}` |
-| linked-list | `/api/v1/linked-list/{slug}` |
-| trees | `/api/v1/trees/{slug}` |
-| dp | `/api/v1/dp/{slug}` |
+| Two Sum | `/api/v1/two-sum` |
 
 ---
 
@@ -138,7 +136,7 @@ mvn spring-boot:run
 ### Arrays
 | # | Problem | Endpoint | Status |
 |---|---|---|---|
-| 1 | Two Sum | `POST /api/v1/arrays/two-sum` | Scaffold only — implement in `TwoSumSolver.java` |
+| 1 | Two Sum | `POST /api/v1/two-sum` | Scaffold only — implement in `TwoSumSolver.java` |
 
 ### Strings
 _(add problems here as you go)_
