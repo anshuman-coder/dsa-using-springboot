@@ -1,1 +1,42 @@
+# Claude
 .claude
+
+# VS Code
+.vscode
+
+# Maven build output
+target/
+
+# Compiled classes
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Mac
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Local environment overrides
+.env
+application-local.properties
