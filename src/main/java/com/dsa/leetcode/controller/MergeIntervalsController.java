@@ -25,7 +25,7 @@ public class MergeIntervalsController {
 
   @PostMapping("merge-intervals")
   @Operation(
-    summary = "LC #56 — Merge Intervals",
+    summary = "LC #5 — Merge Intervals",
     description = "Topic: Array | Return an array of the non-overlapping intervals that cover all the intervals in the input."
   )
   public ApiResponse<ProblemResponse<MergeIntervalsInput, int[][]>> mergeIntervals(
