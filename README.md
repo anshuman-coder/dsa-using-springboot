@@ -120,6 +120,27 @@ mvn spring-boot:run
 
 ---
 
+## Running tests
+
+```bash
+# Run all tests
+mvn test
+
+# Run a specific test class
+mvn test -Dtest=TwoSumSolverTest
+
+# Run multiple specific test classes
+mvn test -Dtest=TwoSumSolverTest,LongestSubstringSolverTest,MergeIntervalsTest
+
+# Run a single test method inside a class
+mvn test -Dtest=MergeIntervalsTest#overlappingIntervals
+
+# Run all tests and keep going even if some fail (don't stop on first failure)
+mvn test -Dsurefire.failIfNoSpecifiedTests=false
+```
+
+---
+
 ## Adding a new problem — checklist
 
 1. **`util/{topic}/YourProblemSolver.java`** — write the algorithm, annotate with `@Component`

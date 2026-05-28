@@ -37,7 +37,7 @@ public class MergeIntervalsSolver {
 
     for (int i = 0; i < mapped.length; i++) {
       if(mapped[i] != 0) {
-        if(start == -1) start = 1;
+        if(start == -1) start = i;
         end = Math.max(end, mapped[i] - 1);
       }
 
