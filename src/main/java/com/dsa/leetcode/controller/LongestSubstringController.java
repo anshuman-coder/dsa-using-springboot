@@ -10,8 +10,9 @@ import com.dsa.leetcode.model.response.ApiResponse;
 import com.dsa.leetcode.model.response.ProblemResponse;
 import com.dsa.leetcode.service.LongestSubstringService;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.web.bind.annotation.RequestBody;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
@@ -23,6 +24,8 @@ public class LongestSubstringController {
   private final LongestSubstringService longestSubstringService;
 
   @PostMapping("/longest-substring-without-repeating-characters")
+  @Operation(summary = "LC #3 — Longest Substring Without Repeating Characters",
+             description = "Topic: Strings | Returns the length of the longest substring without repeating characters.")
   public ApiResponse<ProblemResponse<LongestSubstringInput, Integer>> longestSubstring(
     @Valid @RequestBody ProblemRequest<LongestSubstringInput> request
   ) {

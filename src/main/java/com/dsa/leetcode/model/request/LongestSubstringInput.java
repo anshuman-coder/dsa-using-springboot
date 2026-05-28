@@ -11,6 +11,6 @@ public class LongestSubstringInput {
   @NotNull(message = "string input is required")
   private String str;
 
-  @NotNull(message = "To validate the result we need to know the correct answer of each test")
+  @NotNull(message = "answer is required to validate the test result")
   private Integer answer;
 }
