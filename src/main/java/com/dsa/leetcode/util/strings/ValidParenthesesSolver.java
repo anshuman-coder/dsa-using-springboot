@@ -16,6 +16,7 @@ public class ValidParenthesesSolver {
   );
 
   public boolean solve(String query) {
+    if(query.length() == 0) return true;
     Deque<Character> stack = new ArrayDeque<>();
     for (char current : query.toCharArray()) {
       if(OPENING_BRACKETS.contains(String.valueOf(current))) stack.push(current);
