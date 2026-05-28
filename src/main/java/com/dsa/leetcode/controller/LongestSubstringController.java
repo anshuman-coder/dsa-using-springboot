@@ -24,7 +24,7 @@ public class LongestSubstringController {
   private final LongestSubstringService longestSubstringService;
 
   @PostMapping("/longest-substring-without-repeating-characters")
-  @Operation(summary = "LC #3 — Longest Substring Without Repeating Characters",
+  @Operation(summary = "LC #2 — Longest Substring Without Repeating Characters",
              description = "Topic: Strings | Returns the length of the longest substring without repeating characters.")
   public ApiResponse<ProblemResponse<LongestSubstringInput, Integer>> longestSubstring(
     @Valid @RequestBody ProblemRequest<LongestSubstringInput> request
